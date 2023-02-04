@@ -9,10 +9,10 @@ import RoundedImage from './RoundedImage';
 export default function Intro2() {
   return (
     <>
-      <div className="px-5 py-20 md:px-40 lg:px-30 bg-primary">
-        <p className="heading-5 text-secondary">Welcome to setra</p>
-        <div className="md:flex items-center justify-between">
-          <div className="flex-1">
+      <div className="px-5 py-20 md:px-20 lg:px-30 bg-primary">
+        <p className="heading-5 text-secondary ">Our Resturant</p>
+        <div className="lg:flex items-center justify-between">
+          <div className="flex-1 mb-10">
             <h1 className="heading-3 md:heading-2 mr-10 mb-8 text-dimBlack">
               Setra is one of the world's best resturantes
             </h1>
@@ -26,13 +26,13 @@ export default function Intro2() {
           <RoundedImage
             src={four}
             abstractPosition="bl"
-            abstract="four"
+            abstract="three"
             squareToRactangle
             className="flex-1"
           />
         </div>
         <div className="md:flex items-center justify-between gap-10">
-          <p className="para-2 leading-6 text-gray-600 mb-10">
+          <p className="para-2 max-w-3xl lg:mx-auto leading-6 text-gray-600 mb-10">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto vero,
             laudantium cupiditate quas provident veritatis molestias repellendus
             voluptatum modi recusandae, repellat. Lorem ipsum dolor sit amet
@@ -42,7 +42,7 @@ export default function Intro2() {
           </p>
           <BigButton
             text="see our restaurant"
-            className="mb-10 basis-1/4"
+            className="mb-10 lg:mr-auto basis-1/5"
             normal={false}
           />
         </div>
