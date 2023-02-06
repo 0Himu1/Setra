@@ -9,7 +9,7 @@ import RoundedImage from './RoundedImage';
 export default function Intro2() {
   return (
     <>
-      <div className="px-5 py-20 md:px-20 lg:px-30 bg-primary">
+      <div className="px-5 py-20 md:px-20 lg:px-40 bg-primary">
         <p className="heading-5 text-secondary ">Our Resturant</p>
         <div className="lg:flex items-center justify-between">
           <div className="flex-1 mb-10">
