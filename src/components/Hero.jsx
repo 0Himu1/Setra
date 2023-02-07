@@ -17,7 +17,7 @@ export default function MainPage() {
       </div>
       <div className="relative md:py-10">
         <Abstract2 className="hidden md:block absolute top-2 left-16" />
-        <Image src={img} className="h-80 md:h-[712px] w-full object-cover" />
+        <Image src={img} className="h-80 md:h-[712px] w-full object-cover" alt="hero" />
       </div>
     </>
   );

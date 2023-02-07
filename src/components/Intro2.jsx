@@ -47,7 +47,7 @@ export default function Intro2() {
           />
         </div>
       </div>
-      <Image src={six} className="h-60 md:h-[712px] w-full object-cover" />
+      <Image src={six} className="h-60 md:h-[712px] w-full object-cover" alt="video" />
     </>
   );
 }

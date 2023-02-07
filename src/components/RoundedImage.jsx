@@ -45,7 +45,7 @@ export default function RoundedImage({
       ) : (
 			  ''
       )}
-      <Image src={src} className="rounded-full h-full w-full object-cover" />
+      <Image src={src} className="rounded-full h-full w-full object-cover" alt="random image" />
     </div>
   );
 }

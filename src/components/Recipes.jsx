@@ -30,7 +30,7 @@ export default function Recipes() {
           <BigButton text="see our recipes" className="mt-12" normal={false} />
         </div>
         <div className="flex-1">
-          <Image src={food} className="w-full h-auto object-cover" />
+          <Image src={food} className="w-full h-auto object-cover" alt="Food" />
         </div>
       </div>
     </div>
