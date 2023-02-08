@@ -1,0 +1,18 @@
+.image > img {
+	transition: 300ms ease-in-out all;
+}
+
+.image:hover > img {
+	filter: brightness(0.5);
+}
+
+.image:hover > .link {
+	display: flex;
+}
+
+.link {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 1px solid rgba(251, 246, 242, 0.4);
+}
