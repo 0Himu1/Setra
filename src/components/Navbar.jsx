@@ -10,7 +10,7 @@ export default function Navbar() {
   const [onSmallScreen, setOnSmallScreen] = useState(false);
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full bg-dimWhite px-5 py-6 divide-y shadow-lg text-dimBlack md:px-20 md:py-5 border-b-[1px] xl:px-[168px] z-10">
+      <nav className="fixed top-0 left-0 w-screen bg-dimWhite px-5 py-6 divide-y shadow-lg text-dimBlack md:px-10 md:py-5 border-b-[1px] xl:px-[168px] z-10">
         <div className="flex items-center justify-between">
           <Image src={logo} alt="Nav Logo" />
           <ul className=" hidden md:flex p-2 ">

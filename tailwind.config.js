@@ -1,4 +1,6 @@
+/* eslint-disable import/no-import-module-exports */
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     './app/**/*.{js,ts,jsx,tsx}',
@@ -16,6 +18,7 @@ module.exports = {
         dimWhite: '#fbf6f2',
         dimBlack: '#232323',
       },
+
       fontFamily: {
         Aclonica: ['Aclonica', 'sans-serif'],
         Qwigley: ['Qwigley', 'cursive'],

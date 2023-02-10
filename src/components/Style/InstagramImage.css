@@ -1,4 +1,5 @@
 .image > img {
+	object-fit: cover;
 	transition: 300ms ease-in-out all;
 }
 

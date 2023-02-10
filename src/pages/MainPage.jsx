@@ -5,6 +5,7 @@ import Intro2 from '@/components/Intro2';
 import Recipes from '@/components/Recipes';
 import Testimonial from '@/components/Testimonial';
 import Instagram from '@/components/Instagram';
+import Footer from '@/components/Footer';
 
 export default function MainPage() {
   return (
@@ -15,6 +16,7 @@ export default function MainPage() {
       <Recipes />
       <Testimonial />
       <Instagram />
+      <Footer />
     </>
   );
 }

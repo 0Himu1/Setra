@@ -46,3 +46,8 @@ a {
 		@apply font-DMSans font-normal text-[16px] leading-[30px] tracking-[.04em];
 	}
 }
+
+.bg-hero {
+	background-image: url('../../public/BG.jpg');
+	background-size: cover;
+}
