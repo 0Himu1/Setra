@@ -21,7 +21,7 @@ export default function Instagram() {
           cupiditate vel ducimus
         </p>
       </div>
-      <div className="md:flex md:flex-wrap lg:flex-nowrap justify-center gap-8 px-5 md:px-20 xl:px-40">
+      <div className="md:flex md:flex-wrap lg:flex-nowrap justify-center bg-dimWhite gap-8 px-5 md:px-20 xl:px-40 xl:py-10">
         <InstaImage src={ins1} className="lg:mt-14" />
         <InstaImage src={ins2} />
         <InstaImage src={ins3} className="lg:mt-14" />

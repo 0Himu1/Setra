@@ -36,7 +36,7 @@ a {
 		@apply font-Qwigley text-[50px] font-normal leading-[52px];
 	}
 	.para-1 {
-		@apply font-DMSans font-normal text-3xl;
+		@apply font-DMSans font-normal text-xl;
 	}
 
 	.para-2 {
@@ -50,4 +50,27 @@ a {
 .bg-hero {
 	background-image: url('../../public/BG.jpg');
 	background-size: cover;
+}
+
+/* Slider */
+/* input[type='range'] {
+	-webkit-appearance: none;
+	width: 100%;
+	@apply bg-dimBlack;
+}
+
+input[type='range']::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	@apply bg-dimBlack;
+	height: 14px;
+	width: 14px;
+	border-radius: 50%;
+} */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+input[type='number'] {
+	-moz-appearance: textfield;
 }

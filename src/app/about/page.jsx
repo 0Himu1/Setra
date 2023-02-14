@@ -14,7 +14,7 @@ export default function About() {
   return (
     <>
       <div className="max-h-screen">
-        <div className="bg-dimWhite px-5 py-10 mt-20">
+        <div className="bg-dimWhite px-5 py-10 lg:py-16 mt-20">
           <h1 className="heading-1 text-8xl text-left mb-3 lg:text-center">
             About Setra
           </h1>

@@ -1,6 +1,7 @@
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import Instagram from '@/components/Instagram';
 
 export default function RootLayout({ children }) {
   return (
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
       <body>
         <Navbar />
         <main className="bg-dimWhite">{children}</main>
+        <Instagram />
         <Footer />
       </body>
     </html>
