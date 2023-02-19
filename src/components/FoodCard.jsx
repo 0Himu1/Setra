@@ -6,9 +6,9 @@ export default function FoodCard({
   src, name, des, price,
 }) {
   return (
-    <div className="text-dimBlack flex-1 w-80 mx-auto">
-      <div className="h-80 w-80 mb-5 mx-auto ">
-        <Image src={src} className="w-full object-cover h-80 rounded-lg" alt="food" />
+    <div className="text-dimBlack flex-1 max-w-[300px] mx-auto">
+      <div className="h-[300px] w-[300px] mb-5 mx-auto overflow-hidden">
+        <Image src={src} className="w-full object-cover h-full rounded-lg" alt="food" />
       </div>
       <h2 className="font-Aclonica text-2xl mb-3">{name}</h2>
       <p className="para-3 border-b pb-4">{des}</p>

@@ -1,56 +1,79 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useReducer, useState } from 'react';
 import { GoSettings } from 'react-icons/go';
 import { BsChevronDown } from 'react-icons/bs';
+import Link from 'next/link';
 import FoodCard from '@/components/FoodCard';
-import menu1 from '../../../public/menu1.jpg';
 import Sidebar from '@/components/Sidebar';
+import { foodMenu, populer } from '@/pages/api/data';
+
+const {
+  burger, nachos, pizza, tacos, bowls,
+} = foodMenu;
+const menu = burger.concat(nachos, pizza, tacos, bowls);
+
+function reducer(state, action) {
+  switch (action.type) {
+    case 'all':
+      return menu;
+    case 'burger':
+      return burger;
+    case 'nachos':
+      return nachos;
+    case 'pizza':
+      return pizza;
+    case 'tacos':
+      return tacos;
+    case 'bowls':
+      return bowls;
+    default:
+      return menu;
+  }
+}
 
 export default function page() {
-  const [showSidebar, setShowSidebar] = useState(false);
-  console.log(window.innerWidth);
-
+  const [showSidebar, setShowSidebar] = useState(window.innerWidth > 1023);
+  const [onBigScreen] = useState(window.innerWidth > 1023);
+  const [menuItems, dispatch] = useReducer(reducer, menu);
   return (
     <>
-      <div className="mt-20 px-5 py-10 ">
+      <div className="mt-20 px-5 py-10 md:px-10 lg:px-16 xl:px-20 2xl:px-32  ">
         <div className="flex justify-between">
-          <div onClick={() => setShowSidebar(!showSidebar)} className="flex justify-center items-center para-1">
+          <div
+            onClick={() => setShowSidebar(!showSidebar)}
+            className="flex justify-center items-center para-1 cursor-pointer"
+          >
             <GoSettings className="mr-1" />
             <p>Filter</p>
           </div>
-          <div className="flex justify-center items-center para-1">
+          <div className="flex justify-center items-center para-1 cursor-pointer">
             <p>Defult Sorting</p>
             <BsChevronDown className="ml-1" />
           </div>
         </div>
       </div>
-      <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} className={`${showSidebar ? 'block' : 'hidden'} absolute`} />
-      <div className="p-5 flex flex-col md:flex-row md:flex-wrap gap-10">
-        <FoodCard
-          src={menu1}
-          name="Crispy chicken breast"
-          des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, praesentium?"
-          price={44}
+      <div className="md:flex justify-between items-start flex-row-reverse p-5 md:px-10 lg:px-16 xl:px-20 2xl:px-32">
+        <Sidebar
+          showSidebar={showSidebar}
+          dispatch={dispatch}
+          setShowSidebar={setShowSidebar}
+          populer={populer}
+          className={`${showSidebar ? 'block' : 'hidden'} 
+          ${onBigScreen ? 'static' : 'absolute'} lg:bg-dimWhite flex-auto max-w-xs`}
         />
-        <FoodCard
-          src={menu1}
-          name="Crispy chicken breast"
-          des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, praesentium?"
-          price={44}
-        />
-        <FoodCard
-          src={menu1}
-          name="Crispy chicken breast"
-          des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, praesentium?"
-          price={44}
-        />
-        <FoodCard
-          src={menu1}
-          name="Crispy chicken breast"
-          des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, praesentium?"
-          price={44}
-        />
+        <div className=" flex flex-col md:flex-row md:flex-wrap xl:gap-5 flex-auto">
+          {menuItems.map((o) => (
+            <Link href={`/menu/${o.id}`} key={o.id}>
+              <FoodCard
+                src={o.image}
+                name={o.name}
+                des={o.description.short}
+                price={o.price}
+              />
+            </Link>
+          ))}
+        </div>
       </div>
     </>
   );
