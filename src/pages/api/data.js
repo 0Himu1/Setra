@@ -636,4 +636,13 @@ const populer = [
     name: 'Jalapino', price: 5.5, img: menu1, key: 3,
   },
 ];
+
+const userdata = {
+  name: '',
+  cart: [],
+};
+
+const addToCart = (id) => {
+  
+};
 export { populer, foodMenu };
