@@ -1,13 +1,115 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=DM+Sans&family=Qwigley&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,
+body {
+	max-width: 100vw;
+	overflow-x: hidden;
 }
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+@layer components {
+	.heading-1 {
+		@apply font-Aclonica text-[78px] font-normal leading-[102px] tracking-[-0.02em];
+	}
+	.heading-2 {
+		@apply font-Aclonica text-[70px] font-normal leading-[82px] tracking-[-0.02em];
+	}
+	.heading-3 {
+		@apply font-Aclonica text-[42px] font-normal leading-[50px] tracking-[-0.02em];
+	}
+	.heading-4 {
+		@apply font-Aclonica text-[30px] font-normal leading-[34px] tracking-[0.03em];
+	}
+	.heading-5 {
+		@apply font-Qwigley text-[50px] font-normal leading-[52px];
+	}
+	.para-1 {
+		@apply font-DMSans font-normal text-xl;
+	}
+
+	.para-2 {
+		@apply font-DMSans font-normal text-[18px] leading-[30px];
+	}
+	.para-3 {
+		@apply font-DMSans font-normal text-[16px] leading-[30px] tracking-[.04em];
+	}
+}
+
+.bg-hero {
+	background-image: url('./images/BG.jpg');
+	background-size: cover;
+}
+
+/* Slider */
+/* input[type='range'] {
+	-webkit-appearance: none;
+	width: 100%;
+	@apply bg-dimBlack;
+}
+
+input[type='range']::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	@apply bg-dimBlack;
+	height: 14px;
+	width: 14px;
+	border-radius: 50%;
+} */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+/* InstaImage component start */
+
+.image > img {
+	object-fit: cover;
+	transition: 300ms ease-in-out all;
+}
+
+.image:hover > img {
+	filter: brightness(0.5);
+}
+
+.image:hover > .link {
+	display: flex;
+}
+
+.link {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 1px solid rgba(251, 246, 242, 0.4);
+}
+
+/* InstaImage component end */
+
+/* RengeSlider component start */
+
+input[type='range']::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	pointer-events: auto;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	@apply bg-dimBlack;
+
+	/* @apply w-6 h-6 appearance-none pointer-events-auto; */
+}
+
+/* RengeSlider component end */

@@ -1,0 +1,17 @@
+import React from 'react';
+
+export default function RightArrow({ className }) {
+  return (
+    <svg
+      className={className}
+      width="15"
+      height="14"
+      viewBox="0 0 15 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M1 1L7 7L1 13" stroke="#232323" strokeWidth="2" />
+      <path d="M8.5 2L13.5 7L8.5 12" stroke="#232323" strokeWidth="2" />
+    </svg>
+  );
+}
